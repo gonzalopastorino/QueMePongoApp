@@ -1,0 +1,146 @@
+@import url(//fonts.googleapis.com/css?family=Lato:300:400);
+
+/* Reset de margen del body y configuración de la fuente */
+body {
+  margin: 0;
+  font-family: 'Lato', sans-serif;
+}
+
+/* Estilos del encabezado */
+.header {
+  position: relative;
+  text-align: center;
+  background: linear-gradient(60deg, rgba(84, 58, 183, 1) 0%, rgba(0, 172, 193, 1) 100%);
+  color: white;
+}
+
+/* Estilos del contenedor interno del encabezado */
+.inner-header {
+  height: 20vh; /* Altura ajustada del encabezado */
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Estilos del título h1 */
+h1 {
+  font-weight: 300;
+  letter-spacing: 2px;
+  font-size: 48px;
+  margin: 0;
+  padding-top: 20px; /* Espacio superior adicional para elevar el título */
+}
+
+/* Estilos del contenedor principal */
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: linear-gradient(to top, #FFFFFF, #6DD5FA, #2980B9);
+  margin: 20px auto;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.685); /* Sombreado */
+  width: 300px;
+}
+
+/* Estilos de la tarjeta del clima */
+.weather-card {
+  margin-bottom: 20px;
+}
+
+.weather-card p {
+  margin: 0;
+  font-size: 18px;
+}
+
+/* Estilos de las sugerencias de ropa */
+.clothing-suggestion {
+  background: #00000062;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.664); /* Sombreado */
+  text-align: left;
+}
+
+/* Estilos de las olas */
+.waves {
+  position: relative;
+  width: 100%;
+  height: 15vh;
+  margin-bottom: -7px; /* Fix para el gap en Safari */
+  min-height: 100px;
+  max-height: 150px;
+}
+
+/* Animación de las olas */
+.parallax > use {
+  animation: move-forever 25s cubic-bezier(.55, .5, .45, .5) infinite;
+}
+
+.parallax > use:nth-child(1) {
+  animation-delay: -2s;
+  animation-duration: 7s;
+}
+
+.parallax > use:nth-child(2) {
+  animation-delay: -3s;
+  animation-duration: 10s;
+}
+
+.parallax > use:nth-child(3) {
+  animation-delay: -4s;
+  animation-duration: 13s;
+}
+
+.parallax > use:nth-child(4) {
+  animation-delay: -5s;
+  animation-duration: 20s;
+}
+
+@keyframes move-forever {
+  0% {
+    transform: translate3d(-90px, 0, 0);
+  }
+  100% {
+    transform: translate3d(85px, 0, 0);
+  }
+}
+
+/* Estilos del contenido final */
+.content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 20vh;
+  text-align: center;
+  background-color: white;
+}
+
+/* Media Queries para pantallas más pequeñas */
+@media (max-width: 768px) {
+  .waves {
+    height: 40px;
+    min-height: 40px;
+  }
+  
+  .content {
+    height: 30vh;
+  }
+  
+  h1 {
+    font-size: 24px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .container {
+    width: 90%; /* Hace que el contenedor ocupe el 90% del ancho de la pantalla en dispositivos pequeños */
+  }
+
+  .weather-card p {
+    font-size: 16px; /* Reduce el tamaño de la fuente en pantallas más pequeñas */
+  }
+}
+
