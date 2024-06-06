@@ -19,7 +19,7 @@ class ClothingSuggestionService {
     const SUGGESTION_COOL =
       "Una campera o abrigo liviano, buzo y pantalones largos.";
     const SUGGESTION_MILD =
-      "Usá una campera ligera, remera manga larga, pantalones largos o cortos y zapatos cómodos.";
+      "Usá una campera ligera, remera manga  corta o larga si sos friolento/a, pantalones largos o cortos y zapatos cómodos.";
     const SUGGESTION_WARM =
       "Usá una remera manga corta o manga larga, pantalones largos o cortos, y zapatos cómodos.";
     const SUGGESTION_HOT =
